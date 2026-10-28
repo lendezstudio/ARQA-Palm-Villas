@@ -21,6 +21,8 @@ ORIGINALS = ROOT.parent / "Initial Assets"
 OUT = ROOT / "public" / "media"
 DATA = ROOT / "src" / "data" / "media.json"
 INVENTORY = ROOT / "media" / "inventory.json"
+# Fields kept out of the public bundle.
+PRIVATE = {"reason", "people", "villa_evidence", "approval", "original_file", "public"}
 WIDTHS = [480, 800, 1200, 1600, 2048]
 
 
@@ -157,8 +159,8 @@ def main() -> None:
     # only public records are bundled into the site.
     INVENTORY.write_text(json.dumps({"photos": photos, "videos": videos}, indent=2, ensure_ascii=False), encoding="utf8")
     public = {
-        "photos": [{k: v for k, v in p.items() if k != "reason"} for p in photos if p["public"]],
-        "videos": [{k: v for k, v in x.items() if k not in ("reason", "people", "villa_evidence")} for x in videos if x["public"]],
+        "photos": [{k: v for k, v in p.items() if k not in PRIVATE} for p in photos if p["public"]],
+        "videos": [{k: v for k, v in x.items() if k not in PRIVATE} for x in videos if x["public"]],
     }
     DATA.parent.mkdir(parents=True, exist_ok=True)
     DATA.write_text(json.dumps(public, indent=2, ensure_ascii=False), encoding="utf8")

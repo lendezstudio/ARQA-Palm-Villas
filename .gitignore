@@ -3,3 +3,7 @@ dist/
 *.log
 .DS_Store
 .vite/
+
+# Internal: owner-confirmation notes, media inventory and exclusion reasons
+HANDOVER.md
+media/

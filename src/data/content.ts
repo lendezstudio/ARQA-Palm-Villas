@@ -1,7 +1,4 @@
-/**
- * Public copy, taken from 03_Website_Copy. Internal notes and unconfirmed
- * facts (rates, capacities, times, address, travel times) are deliberately absent.
- */
+/** Public website copy. */
 export const nav = [
   { label: 'Our Villas', href: '#villas' },
   { label: 'Spaces at ARQA', href: '#spaces' },
@@ -25,7 +22,6 @@ export const intro = {
   body: 'Settle into warm interiors, step out beside the pool, and leave a little room in the day for doing less. ARQA Palm Villas brings private villa stays to Alfonso, with spaces for quiet moments and time shared.',
 };
 
-/** Names from public listings, pending owner confirmation. No invented differences. */
 export const villas = {
   eyebrow: 'Our Villas',
   heading: 'Find the setting for your stay.',
