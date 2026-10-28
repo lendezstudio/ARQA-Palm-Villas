@@ -1,39 +1,60 @@
-import { actions, footer, invitation, location, plan } from '../data/content';
-import { contacts, credit } from '../data/contacts';
+import { actions, contactLabels, footer, invitation, location, plan } from '../data/content';
+import { contacts, credit, map } from '../data/contacts';
 import { asset, photo } from '../data/media';
 import { useUi } from '../lib/ui';
 import { Icon } from './Icon';
 import { Picture } from './Picture';
 
-const locationImage = photo('balcony-greenery');
 const invitationImage = photo('covered-dining-wide');
 
 export function Location() {
-  const { openInquiry } = useUi();
   return (
     <section id="location" className="location section section--sand" aria-labelledby="location-title">
       <div className="container location__grid">
-        <figure className="location__figure reveal">
-          <div className="frame frame--16x9">
-            <Picture photo={locationImage} sizes="(min-width: 1024px) 720px, calc(100vw - 48px)" />
-          </div>
-          <figcaption className="caption">{locationImage.caption}</figcaption>
-        </figure>
+        <div className="location__map frame frame--16x9 reveal">
+          <iframe
+            src={map.embed}
+            title={location.mapTitle}
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            allowFullScreen
+          />
+        </div>
         <div className="location__text reveal">
           <p className="eyebrow">{location.eyebrow}</p>
           <h2 id="location-title" className="heading">{location.heading}</h2>
           <p className="lede">{location.body}</p>
           <p className="location__place">{footer.place}</p>
-          <button
-            type="button"
-            className="btn btn--line"
-            onClick={() => openInquiry({ message: location.directionsMessage })}
-          >
-            {location.action}
-          </button>
+          <div className="btn-row location__actions">
+            <a className="btn btn--line" href={map.place} target="_blank" rel="noopener noreferrer">
+              {location.openMap}
+            </a>
+            <a className="link-arrow" href={map.directions} target="_blank" rel="noopener noreferrer">
+              <span>{location.directions}</span>
+              <Icon name="arrow" size={18} />
+            </a>
+          </div>
         </div>
       </div>
     </section>
+  );
+}
+
+/** Direct contact lines; each is shown only when configured in contacts.ts. */
+export function ContactLines({ className }: { className?: string }) {
+  return (
+    <ul className={className}>
+      {contacts.email && (
+        <li>
+          <a href={`mailto:${contacts.email}`}>{contacts.email}</a>
+        </li>
+      )}
+      {contacts.phone && (
+        <li>
+          <a href={`tel:${contacts.phone.tel}`}>{contacts.phone.display}</a>
+        </li>
+      )}
+    </ul>
   );
 }
 
@@ -49,6 +70,10 @@ export function PlanYourStay() {
           <button type="button" className="btn btn--solid" onClick={() => openInquiry()}>
             {plan.action}
           </button>
+          <div className="plan__direct">
+            <p>{contactLabels.direct}</p>
+            <ContactLines className="contact-lines" />
+          </div>
         </div>
         <div className="faq reveal">
           {plan.questions.map((item) => (
@@ -99,11 +124,8 @@ export function Footer() {
           <span className="site-footer__plate">
             <img src={asset('media/brand/arqa-logo.webp')} width={618} height={760} alt="ARQA Palm Villas" loading="lazy" />
           </span>
-          <p>
-            {footer.name}
-            <br />
-            {footer.place}
-          </p>
+          <p className="site-footer__place">{footer.place}</p>
+          <ContactLines className="contact-lines contact-lines--footer" />
         </div>
         <nav aria-label="Footer">
           <ul className="site-footer__links">

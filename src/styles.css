@@ -214,13 +214,6 @@ button {
   color: rgba(246, 243, 235, 0.82);
 }
 
-.caption {
-  margin-top: 14px;
-  font-size: 13px;
-  letter-spacing: 0.04em;
-  color: var(--ink-soft);
-}
-
 /* ---------- Buttons ---------- */
 
 .btn {
@@ -612,18 +605,19 @@ button {
 .menu-panel__links a {
   display: flex;
   align-items: baseline;
-  gap: 20px;
-  padding: 18px 0;
+  gap: 18px;
+  padding: 16px 0;
   font-family: var(--serif);
-  font-size: clamp(32px, 6vw, 44px);
+  font-size: clamp(22px, 2.4vw + 14px, 28px);
   font-weight: 300;
-  line-height: 1.15;
+  letter-spacing: 0.04em;
+  line-height: 1.2;
   text-decoration: none;
 }
 
 .menu-panel__num {
   font-family: var(--sans);
-  font-size: 12px;
+  font-size: 10.5px;
   letter-spacing: 0.16em;
   color: var(--ink-soft);
 }
@@ -653,25 +647,95 @@ button {
 .hero__media {
   position: relative;
   height: min(calc(100svh - var(--header-h)), 56.25vw);
-  min-height: 300px;
+  min-height: 420px;
   overflow: hidden;
 }
 
-.hero__still,
-.hero__still img {
+/* Portrait footage: full height in the centre, over a blurred frame of the same clip. */
+.hero__backdrop {
   position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
+  inset: -40px;
+  width: calc(100% + 80px);
+  height: calc(100% + 80px);
+  object-fit: cover;
+  filter: blur(28px) brightness(0.7);
 }
 
-.hero__still img {
-  object-fit: cover;
+.hero__video {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  cursor: pointer;
 }
 
 @media (max-aspect-ratio: 4/5) {
   .hero__media {
-    height: min(calc(100svh - var(--header-h) - 24px), 125vw);
+    height: min(calc(100svh - var(--header-h) - 24px), 177.78vw);
+  }
+
+  .hero__video {
+    object-fit: cover;
+  }
+}
+
+.hero__controls {
+  position: absolute;
+  right: var(--gutter);
+  bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px;
+  background: rgba(20, 22, 20, 0.55);
+  backdrop-filter: blur(6px);
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.4s var(--ease),
+    visibility 0s linear 0.4s;
+}
+
+.hero__controls.is-visible,
+.hero__controls:focus-within {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.25s var(--ease);
+}
+
+.hero__btn {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 1px solid rgba(246, 243, 235, 0.45);
+  border-radius: 50%;
+  background: none;
+  color: var(--ivory);
+  transition: background-color 0.25s var(--ease);
+}
+
+.hero__btn:hover {
+  background: rgba(246, 243, 235, 0.16);
+}
+
+.hero__volume {
+  display: flex;
+  align-items: center;
+  height: 44px;
+  padding: 0 10px 0 6px;
+}
+
+.hero__volume input {
+  width: 96px;
+  accent-color: var(--ivory);
+  cursor: pointer;
+}
+
+@media (max-width: 479px) {
+  .hero__volume input {
+    width: 72px;
   }
 }
 
@@ -888,18 +952,6 @@ button {
   line-height: 1.1;
 }
 
-.film-card__meta {
-  font-size: 11px;
-  font-weight: 500;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: var(--ink-soft);
-}
-
-.film-card__desc {
-  color: var(--ink-soft);
-}
-
 .film-card__action {
   justify-self: start;
   margin-top: 6px;
@@ -1084,13 +1136,6 @@ button {
   opacity: 1;
 }
 
-.tile__caption {
-  display: block;
-  margin-top: 14px;
-  font-size: 14px;
-  letter-spacing: 0.02em;
-}
-
 .tile__sub {
   display: block;
   margin-top: 2px;
@@ -1128,6 +1173,55 @@ button {
     align-items: center;
     gap: 80px;
   }
+}
+
+.location__map iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.location__actions {
+  align-items: center;
+  margin-top: 0;
+  gap: 16px 28px;
+}
+
+.contact-lines {
+  display: grid;
+  gap: 2px;
+}
+
+.contact-lines a {
+  display: inline-block;
+  padding-block: 6px;
+  text-decoration: none;
+  border-bottom: 1px solid var(--rule);
+}
+
+.contact-lines a:hover {
+  border-bottom-color: currentColor;
+}
+
+.plan__direct {
+  margin-top: 36px;
+  padding-top: 24px;
+  border-top: 1px solid var(--rule);
+}
+
+.plan__direct p {
+  margin-bottom: 8px;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+.contact-lines--footer {
+  font-size: 14px;
 }
 
 /* ---------- Plan your stay ---------- */
@@ -1265,8 +1359,16 @@ button {
 
 .site-footer__brand {
   display: flex;
-  align-items: center;
-  gap: 24px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.site-footer__place {
+  font-family: var(--serif);
+  font-size: 17px;
+  letter-spacing: 0.02em;
+  color: var(--ink-soft);
 }
 
 .site-footer__plate {
@@ -1516,7 +1618,7 @@ dialog::backdrop {
   flex: 1 1 200px;
 }
 
-/* Photo and video viewer */
+/* Photo and video viewer: the media fills the screen, controls float above it. */
 .viewer {
   width: 100%;
   max-width: 100%;
@@ -1525,12 +1627,12 @@ dialog::backdrop {
   margin: 0;
   padding: 0;
   border: 0;
-  background: rgba(24, 27, 25, 0.97);
+  background: #000;
   color: var(--ivory);
 }
 
 .viewer::backdrop {
-  background: rgba(24, 27, 25, 0.97);
+  background: #000;
 }
 
 .viewer[open] {
@@ -1545,98 +1647,69 @@ dialog::backdrop {
 
 .viewer__inner {
   position: relative;
-  display: grid;
-  grid-template-rows: auto 1fr auto;
+  width: 100%;
   height: 100%;
-  padding: 8px var(--gutter) 20px;
 }
 
-.viewer__bar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-  min-height: 56px;
-}
-
-.viewer__tools {
-  display: flex;
-  gap: 16px;
-}
-
-.viewer__title {
-  font-family: var(--serif);
-  font-size: 22px;
-  line-height: 1.2;
-}
-
-.viewer__title span {
+.viewer__media,
+.viewer__media img {
+  position: absolute;
+  inset: 0;
   display: block;
-  font-family: var(--sans);
-  font-size: 11px;
-  font-weight: 500;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: rgba(246, 243, 235, 0.75);
-}
-
-.viewer__stage {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 0;
-}
-
-.viewer__img,
-.viewer__video {
-  width: auto;
-  height: auto;
-  max-width: min(90vw, 100%);
-  max-height: min(85vh, calc(100dvh - 150px));
+  width: 100%;
+  height: 100%;
   object-fit: contain;
+}
+
+.viewer__video {
   background: #000;
 }
 
-.viewer__caption {
-  margin-top: 14px;
-  text-align: center;
-  font-size: 14px;
-  color: rgba(246, 243, 235, 0.82);
+.viewer__close,
+.viewer__nav {
+  position: absolute;
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  border: 1px solid rgba(246, 243, 235, 0.35);
+  border-radius: 50%;
+  background: rgba(20, 22, 20, 0.55);
+  color: var(--ivory);
+  backdrop-filter: blur(6px);
+  transition: background-color 0.25s var(--ease);
+}
+
+.viewer__close:hover,
+.viewer__nav:hover {
+  background: rgba(20, 22, 20, 0.85);
+}
+
+.viewer__close {
+  top: max(16px, env(safe-area-inset-top));
+  right: 16px;
 }
 
 .viewer__nav {
-  position: absolute;
   top: 50%;
   transform: translateY(-50%);
 }
 
 .viewer__nav--prev {
-  left: max(8px, calc(var(--gutter) - 40px));
+  left: 16px;
 }
 
 .viewer__nav--next {
-  right: max(8px, calc(var(--gutter) - 40px));
+  right: 16px;
 }
 
 @media (max-width: 719px) {
   .viewer__nav {
     top: auto;
-    bottom: 12px;
+    bottom: max(20px, env(safe-area-inset-bottom));
     transform: none;
-  }
-
-  .viewer__inner {
-    padding-bottom: 72px;
-  }
-
-  .viewer__tools .icon-text-btn span {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    clip-path: inset(50%);
   }
 }
 
@@ -1644,6 +1717,7 @@ dialog::backdrop {
   position: absolute;
   top: 50%;
   left: 50%;
+  z-index: 2;
   display: inline-flex;
   align-items: center;
   gap: 12px;

@@ -1,5 +1,5 @@
 import { actions, films } from '../data/content';
-import { asset, formatDuration, publicVideos } from '../data/media';
+import { asset, publicVideos } from '../data/media';
 import { useUi } from '../lib/ui';
 import { Icon } from './Icon';
 
@@ -19,13 +19,13 @@ export function Films() {
         </header>
 
         <ul className="films__grid">
-          {publicVideos.map((v) => (
+          {publicVideos.filter((v) => v.role !== 'hero').map((v) => (
             <li key={v.id} className="reveal">
               <button
                 type="button"
                 className="film-card"
                 onClick={() => openVideo(v.id)}
-                aria-label={`${actions.walkthrough}: ${v.title}, ${formatDuration(v.duration)}${v.audio_track ? ', with sound' : ''}`}
+                aria-label={`${actions.walkthrough}: ${v.title}`}
               >
                 <span className="frame frame--4x5">
                   <picture>
@@ -45,11 +45,6 @@ export function Films() {
                 </span>
                 <span className="film-card__text" aria-hidden="true">
                   <span className="film-card__title">{v.title}</span>
-                  <span className="film-card__meta">
-                    {v.kind} · {formatDuration(v.duration)}
-                    {v.audio_track ? ' · Sound' : ''}
-                  </span>
-                  <span className="film-card__desc">{v.description}</span>
                   <span className="link-arrow film-card__action">
                     <span>{actions.walkthrough}</span>
                     <Icon name="arrow" size={18} />

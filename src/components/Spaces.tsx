@@ -112,7 +112,7 @@ export function Spaces() {
                 type="button"
                 className="tile"
                 onClick={() => openPhotos(items, i)}
-                aria-label={`${spaces.openPhoto}: ${item.caption}`}
+                aria-label={`${spaces.openPhoto}: ${item.alt}`}
               >
                 <span className="frame frame--4x3">
                   <Picture photo={item} sizes="(min-width: 1024px) 720px, 84vw" />
@@ -120,7 +120,6 @@ export function Spaces() {
                     <Icon name="plus" size={16} /> {spaces.openPhoto}
                   </span>
                 </span>
-                <span className="tile__caption">{item.caption}</span>
               </button>
             </li>
           ))}

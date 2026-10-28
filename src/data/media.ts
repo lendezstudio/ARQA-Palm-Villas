@@ -37,7 +37,7 @@ export interface Video {
   description: string;
   poster?: string;
   thumb?: string;
-  hero_loop_file?: string;
+  backdrop?: string;
   villa_id: string | null;
   role: string;
 }

@@ -30,7 +30,6 @@ export function Intro() {
         <div className="frame frame--16x9">
           <Picture photo={image} sizes="(min-width: 1360px) 1280px, calc(100vw - 48px)" />
         </div>
-        <figcaption className="caption">{image.caption}</figcaption>
       </figure>
     </section>
   );

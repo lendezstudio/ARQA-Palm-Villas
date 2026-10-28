@@ -1,4 +1,4 @@
-type IconName = 'menu' | 'close' | 'prev' | 'next' | 'play' | 'pause' | 'fullscreen' | 'arrow' | 'plus';
+type IconName = 'menu' | 'close' | 'prev' | 'next' | 'play' | 'pause' | 'fullscreen' | 'arrow' | 'plus' | 'volume' | 'mute';
 
 const paths: Record<IconName, string> = {
   menu: 'M3 7h18M3 12h18M3 17h18',
@@ -10,6 +10,8 @@ const paths: Record<IconName, string> = {
   fullscreen: 'M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5',
   arrow: 'M4 12h15M14 6l6 6-6 6',
   plus: 'M12 5v14M5 12h14',
+  volume: 'M4 9h4l5-4v14l-5-4H4zM16.5 9a4 4 0 010 6M19 6.5a7.5 7.5 0 010 11',
+  mute: 'M4 9h4l5-4v14l-5-4H4zM17 9.5l5 5M22 9.5l-5 5',
 };
 
 /** Thin line icons drawn to match the fine-rule styling. */

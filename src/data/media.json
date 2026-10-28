@@ -697,6 +697,30 @@
       "optimized_file": "media/video/film-thatched-villa.mp4",
       "poster": "media/video/film-thatched-villa-poster",
       "thumb": "media/video/film-thatched-villa-thumb"
+    },
+    {
+      "id": "walkthrough-circular-villa",
+      "role": "hero",
+      "title": "ARQA Palm Villas",
+      "kind": "Walkthrough",
+      "description": "",
+      "poster_at": 1.0,
+      "villa_id": null,
+      "width": 716,
+      "height": 1276,
+      "orientation": "portrait",
+      "duration": 79.2,
+      "video_codec": "h264",
+      "audio_track": {
+        "codec": "aac",
+        "channels": 2,
+        "sample_rate": 44100
+      },
+      "captions": null,
+      "optimized_file": "media/video/walkthrough-circular-villa.mp4",
+      "poster": "media/video/walkthrough-circular-villa-poster",
+      "backdrop": "media/video/walkthrough-circular-villa-backdrop.jpg",
+      "thumb": "media/video/walkthrough-circular-villa-thumb"
     }
   ]
 }

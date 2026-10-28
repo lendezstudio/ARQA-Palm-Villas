@@ -34,7 +34,7 @@ export const villas = {
 export const films = {
   eyebrow: 'Walkthroughs',
   heading: 'See the villas in motion.',
-  body: 'Short films of Villa Raia and Balai Mohan, with their original sound.',
+  body: 'Step inside Villa Raia and Balai Mohan, from the pool and shared living spaces to the bedrooms.',
 };
 
 export const timeAtArqa = {
@@ -78,7 +78,7 @@ export const plan = {
     },
     {
       q: 'Where is ARQA Palm Villas?',
-      a: 'ARQA Palm Villas is in Alfonso, Cavite. Request the confirmed location pin and directions when planning your arrival.',
+      a: 'ARQA Palm Villas is in Alfonso, Cavite. Open the location in Google Maps for directions, or ask the team for arrival tips when you plan your visit.',
     },
   ],
 };
@@ -86,9 +86,10 @@ export const plan = {
 export const location = {
   eyebrow: 'Alfonso, Cavite',
   heading: 'Your next stay, in Alfonso.',
-  body: 'Planning the journey is part of planning the stay. Ask the team for the confirmed location pin and arrival directions when arranging your visit.',
-  action: 'Ask for Directions',
-  directionsMessage: 'Could you please share the confirmed location pin and arrival directions?',
+  body: 'Planning the journey is part of planning the stay. Find ARQA Palm Villas on the map, and ask the team if you would like arrival tips for your visit.',
+  openMap: 'Open in Google Maps',
+  directions: 'Get Directions',
+  mapTitle: 'Map showing ARQA Palm Villas in Alfonso, Cavite',
 };
 
 export const invitation = {
@@ -133,6 +134,11 @@ export const inquiry = {
     email: 'Open Email Draft',
     emailHelper: 'Your email app will open with these details. Review and send the message there.',
   },
+};
+
+export const contactLabels = {
+  heading: 'Contact the team',
+  direct: 'Or reach the team directly',
 };
 
 export const footer = {

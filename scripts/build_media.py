@@ -14,7 +14,7 @@ import subprocess
 import sys
 from pathlib import Path
 
-from PIL import Image, ImageOps
+from PIL import Image, ImageFilter, ImageOps
 
 ROOT = Path(__file__).resolve().parent.parent
 ORIGINALS = ROOT.parent / "Initial Assets"
@@ -69,7 +69,15 @@ def build_logo(im: Image.Image) -> dict:
             po[x, y] = tuple(max(0, min(255, round(255 - (255 - c) * f))) for c in (rr, gg, bb)) + (a,)
     out.save(OUT / "brand" / "arqa-logo.png", optimize=True)
     out.save(OUT / "brand" / "arqa-logo.webp", quality=92, exact=True)
-    icon = ImageOps.pad(im.crop((l, t, r, t + round((b - t) * 0.56))), (192, 192), color="white")
+    # Favicon: the leaf mark only, on a transparent background.
+    # The leaf is the first block of non-empty rows; it ends at the gap above the wordmark.
+    alpha = out.getchannel("A")
+    rows = [alpha.crop((0, y, out.width, y + 1)).getbbox() is not None for y in range(out.height)]
+    top = rows.index(True)
+    end = next(y for y in range(top, out.height) if not any(rows[y:y + 8]))
+    leaf = out.crop((0, top, out.width, end))
+    leaf = leaf.crop(leaf.getbbox())
+    icon = ImageOps.pad(leaf, (192, 192), color=(0, 0, 0, 0))
     icon.save(OUT / "brand" / "icon-192.png", optimize=True)
     return dict(optimized_file="media/brand/arqa-logo.webp", trimmed_width=crop.width, trimmed_height=crop.height)
 
@@ -146,6 +154,11 @@ def build_video(v: dict) -> dict:
     thumb.save(OUT / "video" / f"{v['id']}-thumb.jpg", quality=82, optimize=True)
     frame.unlink()
     entry["poster"] = f"media/video/{v['id']}-poster"
+    if v["role"] == "hero":
+        # Soft, darkened backdrop shown either side of the portrait clip on wide screens.
+        small = im.resize((90, 160)).filter(ImageFilter.GaussianBlur(6)).resize((360, 640))
+        small.save(OUT / "video" / f"{v['id']}-backdrop.jpg", quality=70)
+        entry["backdrop"] = f"media/video/{v['id']}-backdrop.jpg"
     entry["thumb"] = f"media/video/{v['id']}-thumb"
 
     if "hero_loop" in v:
