@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { actions, nav } from '../data/content';
 import { contacts } from '../data/contacts';
 import { asset, photo } from '../data/media';
@@ -11,18 +11,10 @@ const logo = photo('logo') as ReturnType<typeof photo> & { trimmed_width: number
 export function Header() {
   const { openInquiry } = useUi();
   const [menuOpen, setMenuOpen] = useState(false);
-  const [compact, setCompact] = useState(false);
-
-  useEffect(() => {
-    const onScroll = () => setCompact(window.scrollY > 80);
-    onScroll();
-    window.addEventListener('scroll', onScroll, { passive: true });
-    return () => window.removeEventListener('scroll', onScroll);
-  }, []);
 
   return (
     <>
-      <header className={`site-header${compact ? ' is-compact' : ''}`}>
+      <header className="site-header">
         <div className="site-header__bar">
           <div className="site-header__start">
             <button

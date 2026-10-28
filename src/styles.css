@@ -16,14 +16,14 @@
   --max: 1280px;
   --gutter: clamp(24px, 5vw, 64px);
   --section: clamp(56px, 8vw, 96px);
-  --header-h: 64px;
+  --header-h: 72px;
   --ease: cubic-bezier(0.25, 0.1, 0.25, 1);
   color-scheme: light;
 }
 
 @media (min-width: 1024px) {
   :root {
-    --header-h: 76px;
+    --header-h: 96px;
   }
 }
 
@@ -530,17 +530,12 @@ button {
   transform: scaleX(1);
 }
 
-/* The supplied logo, uncropped artwork on a deliberate white plate. */
+/* The supplied logo, uncropped artwork on a white plate contained within the header bar. */
 .brand-plate {
-  align-self: start;
   display: block;
-  height: 92px;
-  padding: 8px 14px;
+  height: calc(var(--header-h) - 1px);
+  padding: 6px 12px;
   background: var(--white);
-  box-shadow: 0 0 0 1px var(--rule);
-  transition:
-    height 0.35s var(--ease),
-    padding 0.35s var(--ease);
 }
 
 .brand-plate img {
@@ -549,16 +544,9 @@ button {
   object-fit: contain;
 }
 
-.site-header.is-compact .brand-plate {
-  height: var(--header-h);
-  padding: 5px 10px;
-  box-shadow: none;
-}
-
 @media (min-width: 1024px) {
   .brand-plate {
-    height: 124px;
-    padding: 10px 20px;
+    padding: 8px 16px;
   }
 }
 
