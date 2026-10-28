@@ -6,4 +6,4 @@ dist/
 
 # Internal: owner-confirmation notes, media inventory and exclusion reasons
 HANDOVER.md
-media/
+/media/
