@@ -31,6 +31,12 @@ export const villas = {
   action: 'Ask About This Villa',
 };
 
+export const films = {
+  eyebrow: 'Walkthroughs',
+  heading: 'See the villas in motion.',
+  body: 'Short films of Villa Raia and Balai Mohan, with their original sound.',
+};
+
 export const timeAtArqa = {
   eyebrow: 'Time at ARQA',
   heading: 'A slower kind of day.',
@@ -52,7 +58,6 @@ export const spaces = {
     { key: 'interior', label: 'Interiors' },
     { key: 'poolside', label: 'Poolside' },
     { key: 'detail', label: 'Details' },
-    { key: 'video', label: 'Video' },
   ] as const,
   openPhoto: 'Open Photo',
 };

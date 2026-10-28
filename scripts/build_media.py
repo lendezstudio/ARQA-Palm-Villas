@@ -45,6 +45,35 @@ def save_variants(im: Image.Image, stem: str, widths: list[int]) -> list[int]:
     return made
 
 
+def build_logo(im: Image.Image) -> dict:
+    """Trim the surrounding white and turn the white background transparent.
+
+    Alpha is recovered by "unmultiplying" white, so the gold artwork keeps its
+    exact colour and soft edges; nothing in the artwork is redrawn.
+    """
+    gray = ImageOps.invert(im.convert("L")).point(lambda v: 255 if v > 12 else 0)
+    l, t, r, b = gray.getbbox()
+    pad = 24
+    crop = im.crop((max(l - pad, 0), max(t - pad, 0), min(r + pad, im.width), min(b + pad, im.height)))
+    px = crop.load()
+    out = Image.new("RGBA", crop.size)
+    po = out.load()
+    for y in range(crop.height):
+        for x in range(crop.width):
+            rr, gg, bb = px[x, y]
+            a = max(255 - rr, 255 - gg, 255 - bb)
+            if a < 6:
+                po[x, y] = (0, 0, 0, 0)
+                continue
+            f = 255 / a
+            po[x, y] = tuple(max(0, min(255, round(255 - (255 - c) * f))) for c in (rr, gg, bb)) + (a,)
+    out.save(OUT / "brand" / "arqa-logo.png", optimize=True)
+    out.save(OUT / "brand" / "arqa-logo.webp", quality=92, exact=True)
+    icon = ImageOps.pad(im.crop((l, t, r, t + round((b - t) * 0.56))), (192, 192), color="white")
+    icon.save(OUT / "brand" / "icon-192.png", optimize=True)
+    return dict(optimized_file="media/brand/arqa-logo.webp", trimmed_width=crop.width, trimmed_height=crop.height)
+
+
 def build_photo(p: dict) -> dict:
     src = find_original(p["file"], ".jpg")
     im = ImageOps.exif_transpose(Image.open(src)).convert("RGB")
@@ -60,16 +89,7 @@ def build_photo(p: dict) -> dict:
         return entry
 
     if p["role"] == "brand-logo":
-        # Trim the surrounding white only; the artwork itself is untouched.
-        gray = ImageOps.invert(im.convert("L")).point(lambda v: 255 if v > 12 else 0)
-        l, t, r, b = gray.getbbox()
-        pad = 24
-        crop = im.crop((max(l - pad, 0), max(t - pad, 0), min(r + pad, im.width), min(b + pad, im.height)))
-        crop.save(OUT / "brand" / "arqa-logo.png", optimize=True)
-        crop.save(OUT / "brand" / "arqa-logo.webp", quality=92)
-        icon = ImageOps.pad(im.crop((l, t, r, t + round((b - t) * 0.56))), (192, 192), color="white")
-        icon.save(OUT / "brand" / "icon-192.png", optimize=True)
-        entry.update(optimized_file="media/brand/arqa-logo.webp", trimmed_width=crop.width, trimmed_height=crop.height, variants=[])
+        entry.update(build_logo(im), variants=[])
         return entry
 
     widths = [w for w in WIDTHS if w < im.width] + [im.width]
@@ -147,6 +167,8 @@ def main() -> None:
         (OUT / sub).mkdir(parents=True, exist_ok=True)
     if "--videos-only" in sys.argv and INVENTORY.exists():
         photos = json.loads(INVENTORY.read_text(encoding="utf8"))["photos"]
+        logo = next(p for p in catalog["photos"] if p["role"] == "brand-logo")
+        build_logo(ImageOps.exif_transpose(Image.open(find_original(logo["file"], ".jpg"))).convert("RGB"))
     else:
         photos = [build_photo(p) for p in catalog["photos"]]
     # Remove derivatives of clips that are no longer public.

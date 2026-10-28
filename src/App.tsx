@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from 'react';
+import { Films } from './components/Films';
 import { Header } from './components/Header';
 import { Hero } from './components/Hero';
 import { InquiryPanel } from './components/InquiryPanel';
@@ -43,6 +44,7 @@ export function App() {
         <Hero />
         <Intro />
         <Villas />
+        <Films />
         <TimeAtArqa />
         <Spaces />
         <Location />

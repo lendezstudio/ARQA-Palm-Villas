@@ -105,7 +105,6 @@ button {
 
 .section--dark :focus-visible,
 .viewer :focus-visible,
-.site-footer :focus-visible,
 .hero :focus-visible,
 .invitation__panel :focus-visible {
   outline-color: var(--ivory);
@@ -530,12 +529,11 @@ button {
   transform: scaleX(1);
 }
 
-/* The supplied logo, uncropped artwork on a white plate contained within the header bar. */
+/* The supplied logo (white background removed), contained within the header bar. */
 .brand-plate {
   display: block;
   height: calc(var(--header-h) - 1px);
   padding: 6px 12px;
-  background: var(--white);
 }
 
 .brand-plate img {
@@ -660,58 +658,21 @@ button {
 }
 
 .hero__still,
-.hero__still img,
-.hero__video {
+.hero__still img {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
 }
 
-.hero__still img,
-.hero__video {
+.hero__still img {
   object-fit: cover;
 }
 
 @media (max-aspect-ratio: 4/5) {
   .hero__media {
-    height: min(calc(100svh - var(--header-h) - 24px), 177.78vw);
+    height: min(calc(100svh - var(--header-h) - 24px), 125vw);
   }
-}
-
-.hero__controls {
-  position: absolute;
-  right: var(--gutter);
-  bottom: 24px;
-  display: flex;
-  gap: 8px;
-}
-
-.hero__btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  min-height: 44px;
-  padding: 0 18px;
-  border: 1px solid rgba(246, 243, 235, 0.5);
-  background: rgba(43, 48, 44, 0.55);
-  color: var(--ivory);
-  font-size: 12px;
-  font-weight: 500;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  backdrop-filter: blur(6px);
-  transition: background-color 0.25s var(--ease);
-}
-
-.hero__btn:hover {
-  background: rgba(43, 48, 44, 0.85);
-}
-
-.hero__btn--icon {
-  width: 44px;
-  padding: 0;
-  justify-content: center;
 }
 
 /* ---------- Intro ---------- */
@@ -823,32 +784,6 @@ button {
   margin-top: 4px;
 }
 
-.link-play {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  min-height: 44px;
-  padding: 0;
-  border: 0;
-  background: none;
-  font-size: 12px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--ink-soft);
-}
-
-.link-play:hover {
-  color: var(--charcoal);
-}
-
-.link-play svg {
-  display: block;
-  box-sizing: content-box;
-  padding: 7px 6px 7px 8px;
-  border: 1px solid currentColor;
-  border-radius: 50%;
-}
-
 @media (min-width: 1024px) {
   .villa-index__row {
     grid-template-columns: 72px minmax(0, 1.1fr) minmax(0, 1fr) auto;
@@ -868,6 +803,106 @@ button {
   .villa-index__actions {
     margin-top: 0;
   }
+}
+
+/* ---------- Villa films ---------- */
+
+.films__grid {
+  display: grid;
+  gap: 48px;
+}
+
+@media (min-width: 640px) {
+  .films__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(24px, 4vw, 64px);
+  }
+}
+
+@media (min-width: 1024px) {
+  .films .container {
+    display: grid;
+    grid-template-columns: minmax(0, 4fr) minmax(0, 8fr);
+    align-items: start;
+    gap: 80px;
+  }
+
+  .films .section-head {
+    position: sticky;
+    top: calc(var(--header-h) + 48px);
+    margin-bottom: 0;
+  }
+}
+
+.film-card {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: none;
+  text-align: left;
+}
+
+.film-card .frame img {
+  transition: transform 0.9s var(--ease);
+}
+
+.film-card:hover .frame img {
+  transform: scale(1.03);
+}
+
+.film-card__play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: grid;
+  place-items: center;
+  width: 76px;
+  height: 76px;
+  border: 1px solid rgba(246, 243, 235, 0.9);
+  border-radius: 50%;
+  background: rgba(43, 48, 44, 0.45);
+  color: var(--ivory);
+  transform: translate(-50%, -50%);
+  transition: background-color 0.25s var(--ease);
+}
+
+.film-card__play svg {
+  margin-left: 4px;
+}
+
+.film-card:hover .film-card__play {
+  background: rgba(43, 48, 44, 0.8);
+}
+
+.film-card__text {
+  display: grid;
+  gap: 6px;
+  margin-top: 22px;
+}
+
+.film-card__title {
+  font-family: var(--serif);
+  font-size: clamp(30px, 1.6vw + 22px, 40px);
+  font-weight: 300;
+  line-height: 1.1;
+}
+
+.film-card__meta {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+.film-card__desc {
+  color: var(--ink-soft);
+}
+
+.film-card__action {
+  justify-self: start;
+  margin-top: 6px;
 }
 
 /* ---------- Time at ARQA (dark) ---------- */
@@ -1066,43 +1101,6 @@ button {
   color: var(--ink-soft);
 }
 
-.tile__play {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  display: grid;
-  place-items: center;
-  width: 64px;
-  height: 64px;
-  border: 1px solid rgba(246, 243, 235, 0.85);
-  border-radius: 50%;
-  background: rgba(43, 48, 44, 0.45);
-  color: var(--ivory);
-  transform: translate(-50%, -50%);
-  transition: background-color 0.25s var(--ease);
-}
-
-.tile--video:hover .tile__play {
-  background: rgba(43, 48, 44, 0.8);
-}
-
-.tile__play svg {
-  margin-left: 3px;
-}
-
-.tile__meta {
-  position: absolute;
-  left: 16px;
-  bottom: 16px;
-  padding: 6px 12px;
-  background: rgba(43, 48, 44, 0.72);
-  color: var(--ivory);
-  font-size: 11px;
-  font-weight: 500;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-}
-
 /* ---------- Location ---------- */
 
 .location__grid {
@@ -1254,8 +1252,8 @@ button {
 
 .site-footer {
   padding-block: 64px 32px;
-  background: var(--charcoal);
-  color: var(--ivory);
+  background: var(--sand);
+  color: var(--charcoal);
   font-size: 14px;
 }
 
@@ -1275,8 +1273,6 @@ button {
   flex: none;
   display: block;
   height: 96px;
-  padding: 8px 12px;
-  background: var(--white);
 }
 
 .site-footer__plate img {
@@ -1312,13 +1308,13 @@ button {
   justify-content: space-between;
   gap: 12px;
   padding-top: 24px;
-  border-top: 1px solid var(--rule-light);
-  color: rgba(246, 243, 235, 0.78);
+  border-top: 1px solid var(--rule);
+  color: var(--ink-soft);
   font-size: 13px;
 }
 
 .site-footer__base a {
-  color: var(--ivory);
+  color: var(--charcoal);
   text-underline-offset: 4px;
 }
 

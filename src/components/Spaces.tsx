@@ -1,39 +1,19 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import { actions, spaces } from '../data/content';
-import { asset, formatDuration, galleryPhotos, publicVideos, type Photo, type Video } from '../data/media';
+import { spaces } from '../data/content';
+import { galleryPhotos } from '../data/media';
 import { pad2, prefersReducedMotion, useUi } from '../lib/ui';
 import { Icon } from './Icon';
 import { Picture } from './Picture';
 
 type FilterKey = (typeof spaces.filters)[number]['key'];
-type Item = { kind: 'photo'; photo: Photo } | { kind: 'video'; video: Video };
-
-/** Interleave the walkthroughs through the photos so All Spaces reads as one journey. */
-function buildItems(filter: FilterKey): Item[] {
-  const photos: Item[] = galleryPhotos
-    .filter((p) => filter === 'all' || p.category === filter)
-    .map((p) => ({ kind: 'photo', photo: p }));
-  const videos: Item[] = publicVideos.map((v) => ({ kind: 'video', video: v }));
-  if (filter === 'video') return videos;
-  if (filter !== 'all') return photos;
-  const out: Item[] = [];
-  photos.forEach((p, i) => {
-    out.push(p);
-    const v = videos[(i - 1) / 6];
-    if (i % 6 === 1 && v) out.push(v);
-  });
-  return out;
-}
-
 export function Spaces() {
-  const { openPhotos, openVideo } = useUi();
+  const { openPhotos } = useUi();
   const [filter, setFilter] = useState<FilterKey>('all');
   const [index, setIndex] = useState(0);
   const track = useRef<HTMLUListElement>(null);
-  const items = useMemo(() => buildItems(filter), [filter]);
-  const photosInView = useMemo(
-    () => items.flatMap((i) => (i.kind === 'photo' ? [i.photo] : [])),
-    [items],
+  const items = useMemo(
+    () => galleryPhotos.filter((p) => filter === 'all' || p.category === filter),
+    [filter],
   );
 
   const scrollToIndex = useCallback((i: number) => {
@@ -85,13 +65,7 @@ export function Spaces() {
             <p className="eyebrow">{spaces.eyebrow}</p>
             <h2 id="spaces-title" className="heading">{spaces.heading}</h2>
           </div>
-          <div>
-            <p className="section-head__body">{spaces.body}</p>
-            <button type="button" className="link-arrow" onClick={() => openVideo(publicVideos[0].id)}>
-              <span>{actions.walkthrough}</span>
-              <Icon name="arrow" size={18} />
-            </button>
-          </div>
+          <p className="section-head__body">{spaces.body}</p>
         </header>
 
         <div className="filters" role="group" aria-label="Filter the gallery">
@@ -132,30 +106,24 @@ export function Spaces() {
             }
           }}
         >
-          {items.map((item) =>
-            item.kind === 'photo' ? (
-              <li key={item.photo.id} className="gallery__item">
-                <button
-                  type="button"
-                  className="tile"
-                  onClick={() => openPhotos(photosInView, photosInView.indexOf(item.photo))}
-                  aria-label={`${spaces.openPhoto}: ${item.photo.caption}`}
-                >
-                  <span className="frame frame--4x3">
-                    <Picture photo={item.photo} sizes="(min-width: 1024px) 720px, 84vw" />
-                    <span className="tile__hint" aria-hidden="true">
-                      <Icon name="plus" size={16} /> {spaces.openPhoto}
-                    </span>
+          {items.map((item, i) => (
+            <li key={item.id} className="gallery__item">
+              <button
+                type="button"
+                className="tile"
+                onClick={() => openPhotos(items, i)}
+                aria-label={`${spaces.openPhoto}: ${item.caption}`}
+              >
+                <span className="frame frame--4x3">
+                  <Picture photo={item} sizes="(min-width: 1024px) 720px, 84vw" />
+                  <span className="tile__hint" aria-hidden="true">
+                    <Icon name="plus" size={16} /> {spaces.openPhoto}
                   </span>
-                  <span className="tile__caption">{item.photo.caption}</span>
-                </button>
-              </li>
-            ) : (
-              <li key={item.video.id} className="gallery__item">
-                <VideoTile video={item.video} onOpen={() => openVideo(item.video.id)} />
-              </li>
-            ),
-          )}
+                </span>
+                <span className="tile__caption">{item.caption}</span>
+              </button>
+            </li>
+          ))}
         </ul>
       </div>
 
@@ -181,29 +149,5 @@ export function Spaces() {
         </div>
       </div>
     </section>
-  );
-}
-
-export function VideoTile({ video, onOpen }: { video: Video; onOpen: () => void }) {
-  return (
-    <button type="button" className="tile tile--video" onClick={onOpen} aria-label={`${actions.walkthrough}: ${video.title}, ${formatDuration(video.duration)}${video.audio_track ? ', with sound' : ''}`}>
-      <span className="frame frame--4x3">
-        <picture>
-          <source type="image/webp" srcSet={asset(`${video.thumb}.webp`)} />
-          <img src={asset(`${video.thumb}.jpg`)} width={720} height={540} alt="" loading="lazy" decoding="async" />
-        </picture>
-        <span className="tile__play" aria-hidden="true">
-          <Icon name="play" size={18} />
-        </span>
-        <span className="tile__meta" aria-hidden="true">
-          {video.kind} · {formatDuration(video.duration)}
-          {video.audio_track ? ' · Sound' : ''}
-        </span>
-      </span>
-      <span className="tile__caption">
-        {video.title}
-        <span className="tile__sub">{actions.walkthrough}</span>
-      </span>
-    </button>
   );
 }

@@ -660,16 +660,6 @@
       "description": "Circular windows, poolside dining, bedrooms and a view from above.",
       "poster_at": 6.5,
       "villa_id": "villa-raia",
-      "hero_loop": [
-        [
-          5.0,
-          8.8
-        ],
-        [
-          17.0,
-          21.3
-        ]
-      ],
       "width": 720,
       "height": 1280,
       "orientation": "portrait",
@@ -683,8 +673,7 @@
       "captions": null,
       "optimized_file": "media/video/film-circular-villa.mp4",
       "poster": "media/video/film-circular-villa-poster",
-      "thumb": "media/video/film-circular-villa-thumb",
-      "hero_loop_file": "media/video/film-circular-villa-hero-loop.mp4"
+      "thumb": "media/video/film-circular-villa-thumb"
     },
     {
       "id": "film-thatched-villa",
