@@ -1,0 +1,1271 @@
+{
+  "photos": [
+    {
+      "id": "logo",
+      "role": "brand-logo",
+      "category": "brand",
+      "public": true,
+      "approval": "owner_approval_required",
+      "alt": "ARQA Palm Villas logo: a gold leaf outline above the ARQA wordmark",
+      "caption": "",
+      "focal": [
+        0.5,
+        0.5
+      ],
+      "original_file": "Initial Assets/584587590_842887011823574_4970603865677529734_n.jpg",
+      "width": 959,
+      "height": 959,
+      "villa_id": null,
+      "optimized_file": "media/brand/arqa-logo.webp",
+      "trimmed_width": 618,
+      "trimmed_height": 760,
+      "variants": []
+    },
+    {
+      "id": "pool-dusk-circular-facade",
+      "role": "hero",
+      "category": "poolside",
+      "public": true,
+      "approval": "owner_approval_required",
+      "alt": "A lit pool at dusk in front of a two-storey villa with circular windows and warm exterior lights",
+      "caption": "Poolside at dusk",
+      "focal": [
+        0.55,
+        0.55
+      ],
+      "original_file": "Initial Assets/821621848_1092350910210515_1678805505646144_n.jpg",
+      "width": 2048,
+      "height": 1365,
+      "villa_id": null,
+      "variants": [
+        480,
+        800,
+        1200,
+        1600,
+        2048
+      ],
+      "optimized_file": "media/photos/pool-dusk-circular-facade-2048.jpg"
+    },
+    {
+      "id": "timber-living-rattan",
+      "role": "editorial",
+      "category": "interior",
+      "public": true,
+      "approval": "owner_approval_required",
+      "alt": "Double-height living area with a timber staircase, woven rattan seating and glass doors open to the pool",
+      "caption": "Timber-lined living space",
+      "focal": [
+        0.45,
+        0.5
+      ],
+      "original_file": "Initial Assets/819539723_1092283243550615_8972824517122585166_n.jpg",
+      "width": 2048,
+      "height": 1365,
+      "villa_id": null,
+      "variants": [
+        480,
+        800,
+        1200,
+        1600,
+        2048
+      ],
+      "optimized_file": "media/photos/timber-living-rattan-2048.jpg"
+    },
+    {
+      "id": "thatched-villa-pool",
+      "role": "gallery",
+      "category": "poolside",
+      "public": true,
+      "approval": "owner_approval_required",
+      "alt": "Two-storey thatched-roof villa with an upper balcony, open ground floor and a pool in front",
+      "caption": "Thatched roof and pool",
+      "focal": [
+        0.45,
+        0.5
+      ],
+      "original_file": "Initial Assets/819902593_1092360273542912_7044692868879899555_n.jpg",
+      "width": 2048,
+      "height": 1365,
+      "villa_id": null,
+      "variants": [
+        480,
+        800,
+        1200,
+        1600,
+        2048
+      ],
+      "optimized_file": "media/photos/thatched-villa-pool-2048.jpg"
+    },
+    {
+      "id": "covered-dining-wide",
+      "role": "gallery",
+      "category": "interior",
+      "public": true,
+      "approval": "owner_approval_required",
+      "alt": "Covered dining area with a long slab timber table and benches beside the pool edge",
+      "caption": "Shared dining space",
+      "focal": [
+        0.55,
+        0.5
+      ],
+      "original_file": "Initial Assets/821656408_1092362136876059_729320983966854848_n.jpg",
+      "width": 2048,
+      "height": 1365,
+      "villa_id": null,
+      "variants": [
+        480,
+        800,
+        1200,
+        1600,
+        2048
+      ],
+      "optimized_file": "media/photos/covered-dining-wide-2048.jpg"
+    },
+    {
+      "id": "balcony-greenery",
+      "role": "editorial",
+      "category": "detail",
+      "public": true,
+      "approval": "owner_approval_required",
+      "alt": "Upper balcony under a woven bamboo ceiling, with a timber rail and banana trees beyond",
+      "caption": "Balcony and greenery",
+      "focal": [
+        0.4,
+        0.5
+      ],
+      "original_file": "Initial Assets/819921615_1092283826883890_856125411138843565_n.jpg",
+      "width": 2048,
+      "height": 1365,
+      "villa_id": null,
+      "variants": [
+        480,
+        800,
+        1200,
+        1600,
+        2048
+      ],
+      "optimized_file": "media/photos/balcony-greenery-2048.jpg"
+    },
+    {
+      "id": "living-to-pool",
+      "role": "gallery",
+      "category": "interior",
+      "public": true,
+      "approval": "owner_approval_required",
+      "alt": "Living room with woven armchairs and a tall timber-framed glass door open to the pool",
+      "caption": "Living room opening to the pool",
+      "focal": [
+        0.6,
+        0.5
+      ],
+      "original_file": "Initial Assets/819921360_1092288743550065_6756966895017808290_n.jpg",
+      "width": 2048,
+      "height": 1365,
+      "villa_id": null,
+      "variants": [
+        480,
+        800,
+        1200,
+        1600,
+        2048
+      ],
+      "optimized_file": "media/photos/living-to-pool-2048.jpg"
+    },
+    {
+      "id": "bedroom-bunks",
+      "role": "gallery",
+      "category": "interior",
+      "public": true,
+      "approval": "owner_approval_required",
+      "alt": "Bright bedroom with timber bunk beds, white linen and a glass door to the garden",
+      "caption": "Bedroom with bunk beds",
+      "focal": [
+        0.5,
+        0.5
+      ],
+      "original_file": "Initial Assets/819966897_1092343666877906_6841298159325385614_n.jpg",
+      "width": 2048,
+      "height": 1365,
+      "villa_id": null,
+      "variants": [
+        480,
+        800,
+        1200,
+        1600,
+        2048
+      ],
+      "optimized_file": "media/photos/bedroom-bunks-2048.jpg"
+    },
+    {
+      "id": "bedroom-rattan-bed",
+      "role": "gallery",
+      "category": "interior",
+      "public": true,
+      "approval": "owner_approval_required",
+      "alt": "Bedroom with a woven headboard, green accent cushions and a view through to the pool",
+      "caption": "Woven headboard and garden light",
+      "focal": [
+        0.45,
+        0.55
+      ],
+      "original_file": "Initial Assets/819966897_1092370270208579_3269852365275231007_n.jpg",
+      "width": 2048,
+      "height": 1365,
+      "villa_id": null,
+      "variants": [
+        480,
+        800,
+        1200,
+        1600,
+        2048
+      ],
+      "optimized_file": "media/photos/bedroom-rattan-bed-2048.jpg"
+    },
+    {
+      "id": "bedroom-dark-headboard",
+      "role": "gallery",
+      "category": "interior",
+      "public": true,
+      "approval": "owner_approval_required",
+      "alt": "Calm bedroom with a low timber bed, framed circular artworks and floor-to-ceiling windows",
+      "caption": "Bedroom in soft afternoon light",
+      "focal": [
+        0.55,
+        0.55
+      ],
+      "original_file": "Initial Assets/820336365_1092342326878040_1696421043595012513_n.jpg",
+      "width": 2048,
+      "height": 1365,
+      "villa_id": null,
+      "variants": [
+        480,
+        800,
+        1200,
+        1600,
+        2048
+      ],
+      "optimized_file": "media/photos/bedroom-dark-headboard-2048.jpg"
+    },
+    {
+      "id": "pitched-roof-exterior",
+      "role": "gallery",
+      "category": "poolside",
+      "public": true,
+      "approval": "owner_approval_required",
+      "alt": "Villa with a steep timber-lined roof, upper balcony, stone wall and pool beneath palm trees",
+      "caption": "Pitched timber roof above the pool",
+      "focal": [
+        0.5,
+        0.45
+      ],
+      "original_file": "Initial Assets/818977476_1092346793544260_3868108533972789383_n.jpg",
+      "width": 1365,
+      "height": 1706,
+      "villa_id": null,
+      "variants": [
+        480,
+        800,
+        1200,
+        1365
+      ],
+      "optimized_file": "media/photos/pitched-roof-exterior-1365.jpg"
+    },
+    {
+      "id": "circular-window-facade",
+      "role": "gallery",
+      "category": "poolside",
+      "public": true,
+      "approval": "owner_approval_required",
+      "alt": "Two-storey villa facade with two large circular windows overlooking a pool",
+      "caption": "Circular windows over the pool",
+      "focal": [
+        0.5,
+        0.45
+      ],
+      "original_file": "Initial Assets/698800734_978303421615265_2836482872103072444_n.jpg",
+      "width": 959,
+      "height": 1200,
+      "villa_id": null,
+      "variants": [
+        480,
+        800,
+        959
+      ],
+      "optimized_file": "media/photos/circular-window-facade-959.jpg"
+    },
+    {
+      "id": "circular-facade-pool-corner",
+      "role": "gallery",
+      "category": "poolside",
+      "public": true,
+      "approval": "owner_approval_required",
+      "alt": "Corner of the pool beside a facade with two circular grid windows and a timber door",
+      "caption": "Pool corner and circular windows",
+      "focal": [
+        0.5,
+        0.5
+      ],
+      "original_file": "Initial Assets/823758476_1092281806884092_4042375046289872677_n.jpg",
+      "width": 1365,
+      "height": 1706,
+      "villa_id": null,
+      "variants": [
+        480,
+        800,
+        1200,
+        1365
+      ],
+      "optimized_file": "media/photos/circular-facade-pool-corner-1365.jpg"
+    },
+    {
+      "id": "pool-courtyard-doorway",
+      "role": "gallery",
+      "category": "poolside",
+      "public": true,
+      "approval": "owner_approval_required",
+      "alt": "Pool courtyard with timber sliding doors and a covered dining area to one side",
+      "caption": "Pool courtyard",
+      "focal": [
+        0.5,
+        0.55
+      ],
+      "original_file": "Initial Assets/822341642_1092349006877372_6182125668139905653_n.jpg",
+      "width": 1365,
+      "height": 1706,
+      "villa_id": null,
+      "variants": [
+        480,
+        800,
+        1200,
+        1365
+      ],
+      "optimized_file": "media/photos/pool-courtyard-doorway-1365.jpg"
+    },
+    {
+      "id": "circular-window-over-pool",
+      "role": "gallery",
+      "category": "poolside",
+      "public": true,
+      "approval": "owner_approval_required",
+      "alt": "Warmly lit wall with a circular grid window and timber door directly above calm pool water",
+      "caption": "Light across the water",
+      "focal": [
+        0.5,
+        0.55
+      ],
+      "original_file": "Initial Assets/820327520_1092364506875822_7978735358102214631_n.jpg",
+      "width": 1365,
+      "height": 1706,
+      "villa_id": null,
+      "variants": [
+        480,
+        800,
+        1200,
+        1365
+      ],
+      "optimized_file": "media/photos/circular-window-over-pool-1365.jpg"
+    },
+    {
+      "id": "thatched-villa-exterior",
+      "role": "gallery",
+      "category": "poolside",
+      "public": true,
+      "approval": "owner_approval_required",
+      "alt": "Thatched-roof villa with a long upper balcony, kitchen area below and a pool in the foreground",
+      "caption": "Thatched villa from the pool",
+      "focal": [
+        0.5,
+        0.5
+      ],
+      "original_file": "Initial Assets/824121441_1092372400208366_789211746924132261_n.jpg",
+      "width": 1365,
+      "height": 1706,
+      "villa_id": null,
+      "variants": [
+        480,
+        800,
+        1200,
+        1365
+      ],
+      "optimized_file": "media/photos/thatched-villa-exterior-1365.jpg"
+    },
+    {
+      "id": "pitched-villa-dusk",
+      "role": "gallery",
+      "category": "poolside",
+      "public": true,
+      "approval": "owner_approval_required",
+      "alt": "Pitched-roof villa at dusk with a lit balcony, stone wall, pool and raised plunge pool among palms",
+      "caption": "Evening among the palms",
+      "focal": [
+        0.5,
+        0.5
+      ],
+      "original_file": "Initial Assets/861778584_1122842037161402_5745940845921975292_n.jpg",
+      "width": 1080,
+      "height": 1351,
+      "villa_id": null,
+      "variants": [
+        480,
+        800,
+        1080
+      ],
+      "optimized_file": "media/photos/pitched-villa-dusk-1080.jpg"
+    },
+    {
+      "id": "thatched-pool-plunge",
+      "role": "gallery",
+      "category": "poolside",
+      "public": true,
+      "approval": "owner_approval_required",
+      "alt": "Thatched-roof villa with an outdoor dining table beside a mosaic-tiled pool and plunge pool",
+      "caption": "Outdoor dining by the pool",
+      "focal": [
+        0.5,
+        0.55
+      ],
+      "original_file": "Initial Assets/862805884_1121808413931431_7835557234375175494_n.jpg",
+      "width": 849,
+      "height": 1062,
+      "villa_id": null,
+      "variants": [
+        480,
+        800,
+        849
+      ],
+      "optimized_file": "media/photos/thatched-pool-plunge-849.jpg"
+    },
+    {
+      "id": "circular-villa-garden",
+      "role": "gallery",
+      "category": "poolside",
+      "public": true,
+      "approval": "owner_approval_required",
+      "alt": "Circular-window villa with a covered terrace and pool, framed by palms",
+      "caption": "Terrace and pool",
+      "focal": [
+        0.5,
+        0.5
+      ],
+      "original_file": "Initial Assets/864632676_1123067980472141_7591710591091343077_n.jpg",
+      "width": 851,
+      "height": 1063,
+      "villa_id": null,
+      "variants": [
+        480,
+        800,
+        851
+      ],
+      "optimized_file": "media/photos/circular-villa-garden-851.jpg"
+    },
+    {
+      "id": "timber-ceiling-loft",
+      "role": "gallery",
+      "category": "interior",
+      "public": true,
+      "approval": "owner_approval_required",
+      "alt": "Steep timber ceiling with pendant lights above a glass gable wall and an upper loft lounge",
+      "caption": "Timber ceiling and upper loft",
+      "focal": [
+        0.5,
+        0.4
+      ],
+      "original_file": "Initial Assets/687041933_971112769000997_6824659946034573054_n.jpg",
+      "width": 957,
+      "height": 1200,
+      "villa_id": null,
+      "variants": [
+        480,
+        800,
+        957
+      ],
+      "optimized_file": "media/photos/timber-ceiling-loft-957.jpg"
+    },
+    {
+      "id": "covered-dining-pool",
+      "role": "gallery",
+      "category": "interior",
+      "public": true,
+      "approval": "owner_approval_required",
+      "alt": "Covered dining and kitchen area with a slab timber table, facing the pool",
+      "caption": "Around the table",
+      "focal": [
+        0.5,
+        0.55
+      ],
+      "original_file": "Initial Assets/689012395_978303441615263_2386862772964547627_n.jpg",
+      "width": 960,
+      "height": 1200,
+      "villa_id": null,
+      "variants": [
+        480,
+        800,
+        960
+      ],
+      "optimized_file": "media/photos/covered-dining-pool-960.jpg"
+    },
+    {
+      "id": "living-rattan-dining",
+      "role": "gallery",
+      "category": "interior",
+      "public": true,
+      "approval": "owner_approval_required",
+      "alt": "Woven rattan sofa beside tall glass doors, with a dining table and kitchen beyond",
+      "caption": "Living and dining",
+      "focal": [
+        0.5,
+        0.6
+      ],
+      "original_file": "Initial Assets/822276487_1092365283542411_2509893618145909344_n.jpg",
+      "width": 1365,
+      "height": 1706,
+      "villa_id": null,
+      "variants": [
+        480,
+        800,
+        1200,
+        1365
+      ],
+      "optimized_file": "media/photos/living-rattan-dining-1365.jpg"
+    },
+    {
+      "id": "aframe-lounge",
+      "role": "gallery",
+      "category": "interior",
+      "public": true,
+      "approval": "owner_approval_required",
+      "alt": "Upper lounge with rattan sofas under a steep timber A-frame ceiling and glass walls",
+      "caption": "Lounge beneath the timber roof",
+      "focal": [
+        0.5,
+        0.6
+      ],
+      "original_file": "Initial Assets/822298384_1092350120210594_6876617403916332372_n.jpg",
+      "width": 1365,
+      "height": 1706,
+      "villa_id": null,
+      "variants": [
+        480,
+        800,
+        1200,
+        1365
+      ],
+      "optimized_file": "media/photos/aframe-lounge-1365.jpg"
+    },
+    {
+      "id": "thatched-living",
+      "role": "gallery",
+      "category": "interior",
+      "public": true,
+      "approval": "owner_approval_required",
+      "alt": "Living room with a woven pendant light, bamboo ceiling, timber shelves and rattan seating",
+      "caption": "Bamboo ceiling and rattan seating",
+      "focal": [
+        0.5,
+        0.45
+      ],
+      "original_file": "Initial Assets/823787232_1092347550210851_2605586798478823452_n.jpg",
+      "width": 1365,
+      "height": 1706,
+      "villa_id": null,
+      "variants": [
+        480,
+        800,
+        1200,
+        1365
+      ],
+      "optimized_file": "media/photos/thatched-living-1365.jpg"
+    },
+    {
+      "id": "bedroom-pillow-detail",
+      "role": "gallery",
+      "category": "interior",
+      "public": true,
+      "approval": "owner_approval_required",
+      "alt": "Close view of a bed with an olive cushion, bamboo blinds and the pool beyond the window",
+      "caption": "Bedroom with a view of the pool",
+      "focal": [
+        0.5,
+        0.55
+      ],
+      "original_file": "Initial Assets/819913674_1092368836875389_374020617167807040_n.jpg",
+      "width": 1365,
+      "height": 1706,
+      "villa_id": null,
+      "variants": [
+        480,
+        800,
+        1200,
+        1365
+      ],
+      "optimized_file": "media/photos/bedroom-pillow-detail-1365.jpg"
+    },
+    {
+      "id": "rocking-chair-corner",
+      "role": "gallery",
+      "category": "interior",
+      "public": true,
+      "approval": "owner_approval_required",
+      "alt": "Woven rocking chair beside floor-to-ceiling timber-framed windows",
+      "caption": "A quiet corner",
+      "focal": [
+        0.5,
+        0.6
+      ],
+      "original_file": "Initial Assets/821104091_1092355130210093_8155645622145123858_n.jpg",
+      "width": 1365,
+      "height": 1706,
+      "villa_id": null,
+      "variants": [
+        480,
+        800,
+        1200,
+        1365
+      ],
+      "optimized_file": "media/photos/rocking-chair-corner-1365.jpg"
+    },
+    {
+      "id": "corridor-circular-window",
+      "role": "gallery",
+      "category": "detail",
+      "public": true,
+      "approval": "owner_approval_required",
+      "alt": "Sunlit corridor where a circular grid window casts curved shadows on the floor",
+      "caption": "Circular window detail",
+      "focal": [
+        0.5,
+        0.55
+      ],
+      "original_file": "Initial Assets/697380803_978303434948597_4527726458374792422_n.jpg",
+      "width": 960,
+      "height": 1200,
+      "villa_id": null,
+      "variants": [
+        480,
+        800,
+        960
+      ],
+      "optimized_file": "media/photos/corridor-circular-window-960.jpg"
+    },
+    {
+      "id": "stair-corridor-light",
+      "role": "gallery",
+      "category": "detail",
+      "public": true,
+      "approval": "owner_approval_required",
+      "alt": "Narrow stairway under a bamboo ceiling, lit by tall slim windows with greenery outside",
+      "caption": "Stairway light",
+      "focal": [
+        0.5,
+        0.5
+      ],
+      "original_file": "Initial Assets/820410691_1092369533541986_6772434817152916585_n.jpg",
+      "width": 1365,
+      "height": 1706,
+      "villa_id": null,
+      "variants": [
+        480,
+        800,
+        1200,
+        1365
+      ],
+      "optimized_file": "media/photos/stair-corridor-light-1365.jpg"
+    },
+    {
+      "id": "timber-window",
+      "role": "gallery",
+      "category": "detail",
+      "public": true,
+      "approval": "owner_approval_required",
+      "alt": "Timber sliding window with a grid pattern set deep into a textured wall",
+      "caption": "Timber window frame",
+      "focal": [
+        0.5,
+        0.5
+      ],
+      "original_file": "Initial Assets/820935148_1092363666875906_2979605644870494488_n.jpg",
+      "width": 1365,
+      "height": 1706,
+      "villa_id": null,
+      "variants": [
+        480,
+        800,
+        1200,
+        1365
+      ],
+      "optimized_file": "media/photos/timber-window-1365.jpg"
+    },
+    {
+      "id": "circular-window-view",
+      "role": "gallery",
+      "category": "detail",
+      "public": true,
+      "approval": "owner_approval_required",
+      "alt": "Large circular black-framed window looking out to a neighbouring roof, hedges and palms",
+      "caption": "Circular window and neighbouring roof",
+      "focal": [
+        0.5,
+        0.5
+      ],
+      "original_file": "Initial Assets/820935152_1092344903544449_9048358051522214526_n.jpg",
+      "width": 1365,
+      "height": 1706,
+      "villa_id": null,
+      "variants": [
+        480,
+        800,
+        1200,
+        1365
+      ],
+      "optimized_file": "media/photos/circular-window-view-1365.jpg"
+    },
+    {
+      "id": "stair-circular-openings",
+      "role": "gallery",
+      "category": "detail",
+      "public": true,
+      "approval": "owner_approval_required",
+      "alt": "Timber staircase between two circular openings, the lower one framing the pool",
+      "caption": "Stair and circular openings",
+      "focal": [
+        0.5,
+        0.5
+      ],
+      "original_file": "Initial Assets/822286649_1092353026876970_4683169965831052883_n.jpg",
+      "width": 1365,
+      "height": 2048,
+      "villa_id": null,
+      "variants": [
+        480,
+        800,
+        1200,
+        1365
+      ],
+      "optimized_file": "media/photos/stair-circular-openings-1365.jpg"
+    },
+    {
+      "id": "pitched-roof-exterior-lowres",
+      "role": "duplicate",
+      "category": "poolside",
+      "public": false,
+      "approval": "owner_approval_required",
+      "reason": "Lower-resolution near-duplicate of pitched-roof-exterior.",
+      "alt": "Pitched-roof villa exterior and pool",
+      "caption": "",
+      "focal": [
+        0.5,
+        0.5
+      ],
+      "original_file": "Initial Assets/690355212_971112762334331_5360231449460254375_n.jpg",
+      "width": 959,
+      "height": 1199,
+      "villa_id": null,
+      "variants": []
+    },
+    {
+      "id": "comparison-graphic",
+      "role": "internal-marketing-reference",
+      "category": "internal",
+      "public": false,
+      "approval": "internal_only",
+      "reason": "Comparison-style marketing graphic, not a property photograph.",
+      "alt": "Promotional comparison graphic with text",
+      "caption": "",
+      "focal": [
+        0.5,
+        0.5
+      ],
+      "original_file": "Initial Assets/689747717_973877252057882_4830561614232059429_n.jpg",
+      "width": 1122,
+      "height": 1402,
+      "villa_id": null,
+      "variants": []
+    },
+    {
+      "id": "promo-same-week",
+      "role": "internal-marketing-reference",
+      "category": "internal",
+      "public": false,
+      "approval": "internal_only",
+      "reason": "Promotional graphic stating a rate, guest number and check-in/out times. Undated; rates and capacities need owner confirmation before any publication.",
+      "alt": "Same-week booking promotion graphic",
+      "caption": "",
+      "focal": [
+        0.5,
+        0.5
+      ],
+      "original_file": "Initial Assets/861905332_1122599197185686_8619715954199174041_n.jpg",
+      "width": 1254,
+      "height": 1254,
+      "villa_id": null,
+      "variants": []
+    },
+    {
+      "id": "event-table-birthday",
+      "role": "permission-review",
+      "category": "event",
+      "public": false,
+      "approval": "permission_review",
+      "reason": "Event styling with people present; implies event services not yet confirmed.",
+      "alt": "Long table arranged for a birthday gathering",
+      "caption": "",
+      "focal": [
+        0.5,
+        0.5
+      ],
+      "original_file": "Initial Assets/819913667_1092204806891792_161254740355674518_n.jpg",
+      "width": 1080,
+      "height": 1351,
+      "villa_id": null,
+      "variants": []
+    },
+    {
+      "id": "event-table-evening-1",
+      "role": "event-styling",
+      "category": "event",
+      "public": false,
+      "approval": "owner_approval_required",
+      "reason": "Event table styling; implies event/catering services not yet confirmed.",
+      "alt": "Long table set for an evening gathering",
+      "caption": "",
+      "focal": [
+        0.5,
+        0.5
+      ],
+      "original_file": "Initial Assets/829196294_1096523889793217_1692086230276590593_n.jpg",
+      "width": 1080,
+      "height": 1351,
+      "villa_id": null,
+      "variants": []
+    },
+    {
+      "id": "event-table-evening-2",
+      "role": "event-styling",
+      "category": "event",
+      "public": false,
+      "approval": "owner_approval_required",
+      "reason": "Event table styling.",
+      "alt": "Table setting with candles and flowers",
+      "caption": "",
+      "focal": [
+        0.5,
+        0.5
+      ],
+      "original_file": "Initial Assets/829196384_1096523886459884_3875068160471369581_n.jpg",
+      "width": 1080,
+      "height": 1351,
+      "villa_id": null,
+      "variants": []
+    },
+    {
+      "id": "event-table-evening-3",
+      "role": "event-styling",
+      "category": "event",
+      "public": false,
+      "approval": "owner_approval_required",
+      "reason": "Event table styling.",
+      "alt": "Table centrepiece with dried flowers",
+      "caption": "",
+      "focal": [
+        0.5,
+        0.5
+      ],
+      "original_file": "Initial Assets/829196392_1096523893126550_1058374893490972545_n.jpg",
+      "width": 1080,
+      "height": 1351,
+      "villa_id": null,
+      "variants": []
+    },
+    {
+      "id": "event-table-evening-4",
+      "role": "event-styling",
+      "category": "event",
+      "public": false,
+      "approval": "owner_approval_required",
+      "reason": "Event table styling.",
+      "alt": "Table set with plates and candles",
+      "caption": "",
+      "focal": [
+        0.5,
+        0.5
+      ],
+      "original_file": "Initial Assets/829196401_1096523896459883_2831920403808759433_n.jpg",
+      "width": 1080,
+      "height": 1351,
+      "villa_id": null,
+      "variants": []
+    },
+    {
+      "id": "event-table-evening-5",
+      "role": "event-styling",
+      "category": "event",
+      "public": false,
+      "approval": "owner_approval_required",
+      "reason": "Event table styling with buffet warmers and illuminated ARQA letters.",
+      "alt": "Evening table with buffet warmers",
+      "caption": "",
+      "focal": [
+        0.5,
+        0.5
+      ],
+      "original_file": "Initial Assets/829196724_1096523899793216_3358680387584218197_n.jpg",
+      "width": 1080,
+      "height": 1351,
+      "villa_id": null,
+      "variants": []
+    },
+    {
+      "id": "event-garden-table-1",
+      "role": "event-styling",
+      "category": "event",
+      "public": false,
+      "approval": "owner_approval_required",
+      "reason": "Garden event setup with buffet warmers; implies catering.",
+      "alt": "Garden table set for a gathering",
+      "caption": "",
+      "focal": [
+        0.5,
+        0.5
+      ],
+      "original_file": "Initial Assets/833346853_1102064809239125_9136143592858324807_n.jpg",
+      "width": 1080,
+      "height": 1351,
+      "villa_id": null,
+      "variants": []
+    },
+    {
+      "id": "event-garden-table-2",
+      "role": "event-styling",
+      "category": "event",
+      "public": false,
+      "approval": "owner_approval_required",
+      "reason": "Garden birthday setup with buffet warmers; implies catering.",
+      "alt": "Garden birthday table",
+      "caption": "",
+      "focal": [
+        0.5,
+        0.5
+      ],
+      "original_file": "Initial Assets/833391858_1102064805905792_3939753522595350626_n.jpg",
+      "width": 1080,
+      "height": 1351,
+      "villa_id": null,
+      "variants": []
+    },
+    {
+      "id": "guests-children-poolside",
+      "role": "permission-review",
+      "category": "people",
+      "public": false,
+      "approval": "permission_review",
+      "reason": "Identifiable children; needs guardian permission.",
+      "alt": "Two children sitting at the pool edge",
+      "caption": "",
+      "focal": [
+        0.5,
+        0.5
+      ],
+      "original_file": "Initial Assets/865878515_1123032750475664_350409319589957646_n.jpg",
+      "width": 1036,
+      "height": 1296,
+      "villa_id": null,
+      "variants": []
+    },
+    {
+      "id": "collage-thatched-living",
+      "role": "collage",
+      "category": "collage",
+      "public": false,
+      "approval": "owner_approval_required",
+      "reason": "Four-photo social collage; does not fit single-photo frames. Request the individual originals.",
+      "alt": "Collage",
+      "caption": "",
+      "focal": [
+        0.5,
+        0.5
+      ],
+      "original_file": "Initial Assets/862805874_1121808427264763_8889409096631574913_n.jpg",
+      "width": 1077,
+      "height": 1350,
+      "villa_id": null,
+      "variants": []
+    },
+    {
+      "id": "collage-bunk-corridor",
+      "role": "collage",
+      "category": "collage",
+      "public": false,
+      "approval": "owner_approval_required",
+      "reason": "Social collage.",
+      "alt": "Collage",
+      "caption": "",
+      "focal": [
+        0.5,
+        0.5
+      ],
+      "original_file": "Initial Assets/862932149_1122842070494732_7960229071788303902_n.jpg",
+      "width": 1080,
+      "height": 1350,
+      "villa_id": null,
+      "variants": []
+    },
+    {
+      "id": "collage-bedroom-bath",
+      "role": "collage",
+      "category": "collage",
+      "public": false,
+      "approval": "owner_approval_required",
+      "reason": "Social collage.",
+      "alt": "Collage",
+      "caption": "",
+      "focal": [
+        0.5,
+        0.5
+      ],
+      "original_file": "Initial Assets/863248809_1122842067161399_4834077867307255571_n.jpg",
+      "width": 1080,
+      "height": 1350,
+      "villa_id": null,
+      "variants": []
+    },
+    {
+      "id": "collage-dining-gable",
+      "role": "collage",
+      "category": "collage",
+      "public": false,
+      "approval": "owner_approval_required",
+      "reason": "Social collage.",
+      "alt": "Collage",
+      "caption": "",
+      "focal": [
+        0.5,
+        0.5
+      ],
+      "original_file": "Initial Assets/865370603_1122842057161400_5652506446840094539_n.jpg",
+      "width": 1080,
+      "height": 1350,
+      "villa_id": null,
+      "variants": []
+    },
+    {
+      "id": "collage-living-stair",
+      "role": "collage",
+      "category": "collage",
+      "public": false,
+      "approval": "owner_approval_required",
+      "reason": "Social collage.",
+      "alt": "Collage",
+      "caption": "",
+      "focal": [
+        0.5,
+        0.5
+      ],
+      "original_file": "Initial Assets/865774906_1122842063828066_8822526580469766144_n.jpg",
+      "width": 1080,
+      "height": 1350,
+      "villa_id": null,
+      "variants": []
+    },
+    {
+      "id": "collage-bedroom-bath-2",
+      "role": "collage",
+      "category": "collage",
+      "public": false,
+      "approval": "owner_approval_required",
+      "reason": "Social collage.",
+      "alt": "Collage",
+      "caption": "",
+      "focal": [
+        0.5,
+        0.5
+      ],
+      "original_file": "Initial Assets/865945170_1121808437264762_9194018932106302465_n.jpg",
+      "width": 1077,
+      "height": 1350,
+      "villa_id": null,
+      "variants": []
+    },
+    {
+      "id": "collage-thatched-bath-bunk",
+      "role": "collage",
+      "category": "collage",
+      "public": false,
+      "approval": "owner_approval_required",
+      "reason": "Social collage.",
+      "alt": "Collage",
+      "caption": "",
+      "focal": [
+        0.5,
+        0.5
+      ],
+      "original_file": "Initial Assets/867106233_1121808440598095_8240187487793574522_n.jpg",
+      "width": 1077,
+      "height": 1350,
+      "villa_id": null,
+      "variants": []
+    },
+    {
+      "id": "collage-bath-bedroom",
+      "role": "collage",
+      "category": "collage",
+      "public": false,
+      "approval": "owner_approval_required",
+      "reason": "Social collage.",
+      "alt": "Collage",
+      "caption": "",
+      "focal": [
+        0.5,
+        0.5
+      ],
+      "original_file": "Initial Assets/867852732_1122842060494733_7476735252634064441_n.jpg",
+      "width": 1080,
+      "height": 1350,
+      "villa_id": null,
+      "variants": []
+    }
+  ],
+  "videos": [
+    {
+      "id": "film-circular-villa",
+      "role": "hero-film",
+      "public": true,
+      "approval": "owner_approval_required",
+      "title": "Villa Raia",
+      "kind": "Short film",
+      "description": "Circular windows, poolside dining, bedrooms and a view from above.",
+      "poster_at": 6.5,
+      "villa_id": "villa-raia",
+      "villa_evidence": "On-screen title card 'VILLA RAIA · ARQA PALM VILLAS' at 0:02-0:04 of the owner's film.",
+      "people": "Adult model appears at 0:00-0:01, 0:11 and 0:22-0:23; confirm release.",
+      "hero_loop": [
+        [
+          5.0,
+          8.8
+        ],
+        [
+          17.0,
+          21.3
+        ]
+      ],
+      "original_file": "Initial Assets/AQO2OGgvGx3ooe55ChN_5poUhhHmdBkkG-vP3hUqFOWvguKYyeKkGmW2Ghq_Pfw5-dsqeKOhfg2HXzhvaJO_VNzwos2byumsiCO98o4Zm8uUvA.mp4",
+      "width": 720,
+      "height": 1280,
+      "orientation": "portrait",
+      "duration": 33.5,
+      "video_codec": "h264",
+      "audio_track": {
+        "codec": "aac",
+        "channels": 2,
+        "sample_rate": 44100
+      },
+      "captions": null,
+      "optimized_file": "media/video/film-circular-villa.mp4",
+      "poster": "media/video/film-circular-villa-poster",
+      "thumb": "media/video/film-circular-villa-thumb",
+      "hero_loop_file": "media/video/film-circular-villa-hero-loop.mp4"
+    },
+    {
+      "id": "film-thatched-villa",
+      "role": "film",
+      "public": true,
+      "approval": "owner_approval_required",
+      "title": "Balai Mohan",
+      "kind": "Short film",
+      "description": "Thatched roof, bedroom, stairway and pool, seen from the ground and from above.",
+      "poster_at": 13.5,
+      "villa_id": "balai-mohan",
+      "villa_evidence": "On-screen title card 'BALAI MOHAN · ARQA PALM VILLAS' at 0:02-0:04 of the owner's film.",
+      "people": "None observed.",
+      "original_file": "Initial Assets/AQPoNW_x22kT9BqGo8Lo0QAkromOcjR-UMZ8cYNHHMWJJD0TSNiua1tjxzWqrzOe0Y_jJcwUNUBnIqkGV1msYdlKv9ZeDoSRHJ29cuJzwLDL_w.mp4",
+      "width": 720,
+      "height": 1280,
+      "orientation": "portrait",
+      "duration": 30.9,
+      "video_codec": "h264",
+      "audio_track": {
+        "codec": "aac",
+        "channels": 2,
+        "sample_rate": 44100
+      },
+      "captions": null,
+      "optimized_file": "media/video/film-thatched-villa.mp4",
+      "poster": "media/video/film-thatched-villa-poster",
+      "thumb": "media/video/film-thatched-villa-thumb"
+    },
+    {
+      "id": "walkthrough-circular-villa",
+      "role": "walkthrough",
+      "public": false,
+      "approval": "permission_review",
+      "title": "Room by room",
+      "kind": "Walkthrough",
+      "description": "A continuous walk from the pool through living, dining and bedrooms.",
+      "poster_at": 2.0,
+      "reason": "Identifiable children (same as excluded photo) and adult guests appear throughout; needs guardian/guest permission.",
+      "people": "Children and adults, identifiable.",
+      "villa_id": null,
+      "original_file": "Initial Assets/AQNRnqXvj9TBlVlHAxAAmnI2HwuXM3O6Y89Pi2-gHE61CyVt-Ujta2s1SJMYe4D4nIlcrYyywH_djh-B8fAZP8ucqasxGCgWOInf1svcNdd_bA.mp4",
+      "width": 716,
+      "height": 1276,
+      "orientation": "portrait",
+      "duration": 79.2,
+      "video_codec": "h264",
+      "audio_track": {
+        "codec": "aac",
+        "channels": 2,
+        "sample_rate": 44100
+      },
+      "captions": null
+    },
+    {
+      "id": "tour-full",
+      "role": "walkthrough",
+      "public": false,
+      "approval": "permission_review",
+      "title": "The full tour",
+      "kind": "Walkthrough",
+      "description": "A longer look around, from the air to the kitchen and bedrooms.",
+      "poster_at": 1.0,
+      "reason": "Appears to be a third-party creator vlog ('hidden gem in Alfonso Cavite' title, presenters, swimwear, road footage). Usage rights and people releases unconfirmed.",
+      "people": "Identifiable adults throughout.",
+      "villa_id": null,
+      "original_file": "Initial Assets/AQN0M628fiXE6brC0ZvW6sU9yePLgIAVEH3qjUtisD5fqRxxypMLcljV46vKAHDeCJXgyWwbSky6G4KkzbDU5JZHjVFCjlXmD0lR6O7fU_slQQ.mp4",
+      "width": 720,
+      "height": 1280,
+      "orientation": "portrait",
+      "duration": 228.5,
+      "video_codec": "h264",
+      "audio_track": {
+        "codec": "aac",
+        "channels": 2,
+        "sample_rate": 44100
+      },
+      "captions": null
+    },
+    {
+      "id": "event-table-reel",
+      "role": "event-styling",
+      "public": false,
+      "approval": "owner_approval_required",
+      "reason": "Event table and buffet setup; implies event/catering services not yet confirmed.",
+      "title": "Event table setup",
+      "kind": "Reel",
+      "description": "",
+      "poster_at": 1.0,
+      "people": "None observed.",
+      "villa_id": null,
+      "original_file": "Initial Assets/AQO5HiOvl5t7cAyjRv0tqtN5cPMBW6-GwFs3HacS22HnzJv4WbcVX5KwruCts8E5qFrRlJ18EdxJT4tyTLRIELQM3fQbrP_HxYoO_zp-nej8iw.mp4",
+      "width": 720,
+      "height": 1280,
+      "orientation": "portrait",
+      "duration": 20.2,
+      "video_codec": "h264",
+      "audio_track": {
+        "codec": "aac",
+        "channels": 2,
+        "sample_rate": 44100
+      },
+      "captions": null
+    }
+  ]
+}
