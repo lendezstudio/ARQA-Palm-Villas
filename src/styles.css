@@ -651,31 +651,19 @@ button {
   overflow: hidden;
 }
 
-/* Portrait footage: full height in the centre, over a blurred frame of the same clip. */
-.hero__backdrop {
-  position: absolute;
-  inset: -40px;
-  width: calc(100% + 80px);
-  height: calc(100% + 80px);
-  object-fit: cover;
-  filter: blur(28px) brightness(0.7);
-}
-
+/* The clip fills the hero edge to edge; cover crops rather than distorts. */
 .hero__video {
   position: relative;
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
+  object-position: center 55%;
   cursor: pointer;
 }
 
 @media (max-aspect-ratio: 4/5) {
   .hero__media {
     height: min(calc(100svh - var(--header-h) - 24px), 177.78vw);
-  }
-
-  .hero__video {
-    object-fit: cover;
   }
 }
 

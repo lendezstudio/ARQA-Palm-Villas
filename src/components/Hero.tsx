@@ -85,7 +85,6 @@ export function Hero() {
       onFocus={reveal}
     >
       <div className="hero__media">
-        <img className="hero__backdrop" src={asset(clip.backdrop!)} alt="" aria-hidden="true" />
         <video
           ref={ref}
           className="hero__video"
